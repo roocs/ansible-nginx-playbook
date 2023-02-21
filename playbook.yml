@@ -1,0 +1,15 @@
+---
+# This Ansible playbook is used to deploy Nginx as data node for CDS.
+- name: Install Nginx
+  hosts: all
+  become: yes
+
+  pre_tasks:
+    - name: Include vars from custom.yml if found
+      include_vars: "{{ item }}"
+      with_first_found:
+       - custom.yml
+       - null.yml
+  roles:
+    - role: nginxinc.nginx
+   

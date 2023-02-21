@@ -1,0 +1,3 @@
+---
+# nginx
+nginx_install_from: os_repository

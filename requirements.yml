@@ -1,0 +1,11 @@
+---
+roles:
+  # - name: geerlingguy.repo-epel
+  - name: nginxinc.nginx
+  # - name: jdauphant.ssl-certs
+
+collections:
+  - name: ansible.posix
+    version: 1.4.0
+  - name: community.general
+    version: 6.2.0
