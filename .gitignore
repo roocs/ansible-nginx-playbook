@@ -4,6 +4,7 @@ etc/custom*.yml
 
 # external roles from ansible-galaxy
 roles/nginxinc.nginx
+roles/jdauphant.ssl-certs
 
 # ansible collections
 ansible_collections/

@@ -1,8 +1,8 @@
 ---
 roles:
-  # - name: geerlingguy.repo-epel
   - name: nginxinc.nginx
-  # - name: jdauphant.ssl-certs
+  - name: jdauphant.ssl-certs
+  # - name: galaxyproject.self_signed_certs
 
 collections:
   - name: ansible.posix
