@@ -8,6 +8,35 @@ https://github.com/nginxinc/ansible-role-nginx
 Role for ssl certs:
 https://galaxy.ansible.com/jdauphant/ssl-certs
 
+## Run playbook
+
+Do things as root:
+```
+sudo -i
+```
+
+Install ansible:
+```
+yum update
+yum install epel-release
+yum install ansible
+alternatives --config python
+```
+
+Get the playbook:
+```
+mkdir /opt/roocs
+cd /opt/roocs
+
+git clone https://github.com/cehbrecht/ansible-nginx-playbook.git
+cd ansible-nginx-playbook
+```
+
+Run ansible:
+```
+make play
+```
+
 ## Test with vagrant
 
 Spin up AlmaLinux 8.x VM:

@@ -19,7 +19,7 @@ roles:
 
 .PHONY: play
 play: roles
-	echo "Installing PyWPS application with Ansible [all tasks] ..."
+	echo "Installing Nginx with Ansible [all tasks] ..."
 	ansible-playbook -c local -i hosts playbook.yml
 
 .PHONY: clean

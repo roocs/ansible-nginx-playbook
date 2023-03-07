@@ -13,7 +13,7 @@ ssl_certs_path_group: root
 
 # roocs paths to c3s data
 roocs_data_base: /thredds/fileServer
-roocs_data_c3s_cordex: /mnt/lustre/work/ik1017/C3SCORDEX/data/c3s-cordex
-roocs_data_c3s_cmip5: /mnt/lustre/work/ik1017/C3SCMIP5/data/c3s-cmip5
-roocs_data_c3s_cmip6: /mnt/lustre/work/ik1017/CMIP6/data/CMIP6
-roocs_data_c3s_ipcc_atlas: /mnt/lustre/work/ik1017/C3SATLAS/data/c3s-ipcc-ar6-atlas
+roocs_data_c3s_cordex: /mnt/lustre/work/ik1017/C3SCORDEX/data/c3s-cordex/
+roocs_data_c3s_cmip5: /mnt/lustre/work/ik1017/C3SCMIP5/data/c3s-cmip5/
+roocs_data_c3s_cmip6: /mnt/lustre/work/ik1017/CMIP6/data/CMIP6/
+roocs_data_c3s_ipcc_atlas: /mnt/lustre/work/ik1017/C3SATLAS/data/c3s-ipcc-ar6-atlas/
