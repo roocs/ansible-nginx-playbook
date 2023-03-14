@@ -39,7 +39,38 @@ http {
         listen       80 default_server;
         listen       [::]:80 default_server;
         server_name  _;
-        return 301 https://$host$request_uri;
+        root         /usr/share/nginx/html;
+
+        location / {
+        }
+
+        error_page 404 /404.html;
+            location = /40x.html {
+        }
+
+        error_page 500 502 503 504 /50x.html;
+            location = /50x.html {
+        }
+
+        # Serve C3S-CORDEX data
+        location {{ roocs_data_base }}/esg_c3s-cordex/ {
+	       alias {{ roocs_data_c3s_cordex }};
+        } 
+
+        # Serve C3S-CMIP5 data
+        location {{ roocs_data_base }}/esg_c3s-cmip5/ {
+           alias {{ roocs_data_c3s_cmip5 }};
+        }
+
+        # Serve C3S-CMIP6 data
+        location {{ roocs_data_base }}/esg_c3s-cmip6/ {
+           alias {{ roocs_data_c3s_cmip6 }};
+        }
+
+        # Serve C3S-IPCC-AR6-Atlas data
+        location {{ roocs_data_base }}/esg_c3s-ipcc-atlas/ {
+           alias {{ roocs_data_c3s_ipcc_atlas }};
+        }
     }
 
     # Settings for a TLS enabled server.
