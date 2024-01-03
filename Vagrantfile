@@ -17,7 +17,7 @@ Vagrant.configure("2") do |config|
   config.ssh.private_key_path = '~/.vagrant.d/insecure_private_key'
 
   config.vm.define "data" do |data|
-    data.vm.box = "bento/almalinux-8"
+    data.vm.box = "bento/almalinux-9"
     data.vm.hostname = "data.local"
     data.vm.network "private_network", ip: "192.168.128.100"
     # data.vm.provision 'ansible' do |ansible|

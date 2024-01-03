@@ -17,10 +17,9 @@ sudo -i
 
 Install ansible:
 ```
-yum update
-yum install epel-release
-yum install ansible
-alternatives --config python
+dnf update
+dnf install epel-release
+dnf install ansible
 ```
 
 Get the playbook:
@@ -28,9 +27,21 @@ Get the playbook:
 mkdir /opt/roocs
 cd /opt/roocs
 
-git clone https://github.com/cehbrecht/ansible-nginx-playbook.git
+git clone https://github.com/roocs/ansible-nginx-playbook.git
 cd ansible-nginx-playbook
 ```
+
+Available settings:
+```
+less group_vars/all
+```
+
+Customize settings:
+```
+vim custom.yml
+```
+
+Example: `etc/dkrz.yml`
 
 Run ansible:
 ```
@@ -39,7 +50,7 @@ make play
 
 ## Test with vagrant
 
-Spin up AlmaLinux 8.x VM:
+Spin up AlmaLinux 9.x VM:
 ```
 vagrant up
 ```
@@ -51,9 +62,9 @@ vagrant ssh
 
 Install ansible:
 ```
-sudo yum update
-sudo yum install epel-release
-sudo yum install ansible
+sudo dnf update
+sudo dnf install epel-release
+sudo dnf install ansible
 ```
 
 Run ansible:
