@@ -2,7 +2,7 @@
 - name: Copy nginx config to remote
   template:
     src: ./templates/nginx.conf.j2
-    dest: "{{ nginx_conf_path }}/nginx.conf"
+    dest: "{{ nginx_conf_path }}/{{ nginx_conf_name }}.conf"
 
 - name: Assure nginx running at end of playbook
   command: /bin/true
